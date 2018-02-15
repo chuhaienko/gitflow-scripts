@@ -1,0 +1,8 @@
+#!/bin/bash
+
+gf-master
+git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
+git checkout develop
+git pull
+git merge origin/master --no-ff
+git push origin develop

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+BRANCH=$1
+
+echo Try branch $BRANCH
+
+gf-reset
+HASH=`git rev-parse HEAD`
+git merge origin/$BRANCH && git reset --soft $HASH

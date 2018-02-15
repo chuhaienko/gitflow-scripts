@@ -1,0 +1,8 @@
+#!/bin/bash
+
+gf-reset
+
+git fetch --prune
+git checkout master
+git reset --hard origin/master
+git status -bs

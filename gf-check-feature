@@ -1,0 +1,8 @@
+#!/bin/bash
+
+BRANCH=$1
+
+echo Try branch $BRANCH
+
+gf-develop
+git merge origin/feature/$BRANCH && git reset --soft origin/develop

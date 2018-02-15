@@ -1,0 +1,12 @@
+#!/bin/bash
+
+PWD=`pwd`
+SERVICE_NAME=`basename $PWD`
+BRANCH=${SERVICE_NAME}_$1
+
+gf-master
+git checkout -b release/$BRANCH
+git merge origin/develop --no-ff
+git pull origin release/$BRANCH
+git branch --set-upstream-to=release/$BRANCH
+git status -bs
