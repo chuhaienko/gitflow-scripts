@@ -55,6 +55,14 @@ gf-check-branch BRANCH_NAME
 Differences between actual current branch and *origin/BRANCH_NAME*.
 
 
+### gf-check-release
+```
+gf-check-release RELEASE_VERSION
+```
+
+Differences between actual *master* and *origin/release/SERVICE_NAME_VERSION*.
+
+
 ### gf-create-release
 ```
 gf-create-release VERSION
@@ -63,7 +71,7 @@ gf-create-release VERSION
 Create branch *release/FOLDERNAME_VERSION* from actual *master*.
 Merge actual *develop* to it.
 Push it to remote repository.
-*FOLDERNAME* - name of local folder-root of git-repository. 
+*FOLDERNAME* - name of local folder-root of git-repository.
 
 
 ### gf-after-release

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+PWD=`pwd`
+SERVICE_NAME=`basename $PWD`
+BRANCH=${SERVICE_NAME}_$1
+
+echo Try branch $BRANCH
+
+gf-master
+git merge origin/release/$BRACH && git reset --soft origin/master
